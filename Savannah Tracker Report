@@ -1,0 +1,147 @@
+Initial submission: Precision Prompting Challenge
+Savannah Tracker Report
+Precision Prompting Challenge — AfyaTech
+Introduction (50 words) 
+Precision in maternal health AI is not optional—it is life-critical. Generic prompts create unsafe, irrelevant advice that ignores infrastructure gaps, culture, and affordability. In rural East Africa, effective AI must think like a community health worker: local, resource-aware, culturally aligned, and action-oriented under real-world constraints.
+
+Prompt A — Nutrition Advice (Rewritten)
+AIM Framework
+A (Audience): Pregnant women in rural Kenya & Uganda (low-income, limited food variety)
+I (Intent): Deliver safe, practical, culturally relevant nutrition guidance
+M (Mode): SMS-friendly, simple language, under 120 words
+MAP Framework
+M (Material): Local foods (ugali, sukuma wiki, matooke, beans, groundnuts, millet porridge), WHO maternal nutrition basics
+A (Action): Suggest affordable meal combinations using available staples
+P (Persona): Empathetic rural community health assistant
+Rewritten Prompt
+
+You are a rural East African maternal health assistant.
+Give nutrition advice to a pregnant woman using ONLY foods commonly available in rural Kenya and Uganda (e.g., ugali, sukuma wiki, matooke, beans, groundnuts, millet porridge).
+
+Consider:
+
+Limited income and seasonal food access
+Cooking methods used locally
+Cultural eating habits
+
+Provide:
+
+3 simple meal suggestions using local foods
+1 key nutrient benefit per meal (e.g., iron, protein)
+1 practical tip (e.g., how to combine foods for better nutrition)
+
+Keep response under 120 words and easy to understand.
+
+Key Improvement
+
+Eliminates “hallucinated” or irrelevant foods and aligns outputs with real supply chains and affordability, making advice usable—not aspirational.
+
+Prompt B — Appointment Reminders (Rewritten)
+AIM Framework
+A (Audience): Pregnant women living >5km from clinics
+I (Intent): Ensure attendance despite distance and logistical barriers
+M (Mode): SMS reminder with timing and actionable planning
+MAP Framework
+M (Material): Clinic schedules, travel time estimates, CHW (community health worker) support
+A (Action): Prompt planning (transport, time, alternative support)
+P (Persona): Proactive care coordinator
+Rewritten Prompt
+
+You are a maternal health SMS assistant for rural users.
+Generate a reminder for a pregnant woman about her upcoming clinic visit.
+
+Include:
+
+Appointment date and time
+Suggested departure time based on long travel distance (>5km)
+Option to contact a community health worker if unable to travel
+A simple preparation tip (e.g., carry clinic book, water)
+
+Assume:
+
+Limited transport access
+Possible clinic delays or rescheduling
+
+Keep tone supportive, not urgent. Max 80 words.
+
+Key Improvement
+
+Shifts from passive reminders to logistics-aware behavioral nudges, increasing real attendance instead of just awareness.
+
+Prompt C — Emergency Triage (Rewritten)
+Framework Used
+Chain-of-Thought (structured reasoning internally)
+Verifier Pattern (ask before advising)
+Rewritten Prompt
+
+You are a maternal health triage assistant for rural East Africa.
+
+Step 1: Ask 2–3 short clarifying questions before giving advice:
+
+What symptoms are you feeling?
+How severe is it (mild/moderate/severe)?
+How far are you from the nearest clinic?
+
+Step 2: Based on answers, classify situation:
+
+Emergency (urgent care needed)
+Moderate (seek help soon)
+Mild (home care guidance)
+
+Step 3: Provide:
+
+Clear next step (clinic, CHW, or home care)
+Safe, simple action (e.g., rest, hydration)
+Reassurance without causing panic
+
+Avoid medical jargon. Keep under 120 words.
+
+Key Improvement
+
+Reduces panic and unsafe advice by forcing context collection before action, preventing overreaction in low-resource settings.
+
+Reflection (100 words)
+
+This exercise reframes AI from a “knowledge generator” to a context-sensitive decision support tool. In healthcare—especially in underserved regions—accuracy alone is not enough. Relevance, accessibility, and cultural alignment determine impact. Precision prompting ensures AI respects constraints like distance, cost, and local diets. It also reduces harm by structuring reasoning and verification before conclusions. I now see AI less as an answer engine and more as a guided system that must think within human realities, especially where infrastructure gaps make generic intelligence dangerous.
+
+Savannah Adventure — Open-Ended Answers
+1. MAP Failure Explanation + Fix
+
+Failure occurred because:
+
+Material: Used global food assumptions (kale) instead of local availability
+Action: Gave generic advice, not actionable in context
+Persona: Sounded like an urban nutritionist, not a rural advisor
+
+Fixed Prompt:
+
+Provide nutrition advice using only foods commonly available in Kakamega County (e.g., sukuma wiki, maize, beans, sweet potatoes). Suggest realistic meal combinations and explain benefits simply.
+
+2. Verifier Pattern Fix
+
+Before giving advice, ask:
+
+How strong is the pain?
+When did it start?
+Can you reach a clinic easily?
+
+Then provide guidance based on severity and access level, avoiding immediate “go to hospital” unless critical.
+
+3. Chain-of-Thought Justification
+
+Direct WHO summaries are static and context-blind. Chain-of-Thought enables:
+
+Adaptation to infrastructure gaps
+Translation into actionable steps
+Context-aware prioritization
+
+This creates usable intelligence, not just accurate information.
+
+4. OCEAN Framework Use
+O (Observe): Identify claim (doctor ratio)
+C (Check): Cross-verify with latest data sources
+E (Evaluate): Assess relevance and timeliness
+A (Adjust): Update to current statistic (0.9/10,000)
+N (Notify): Flag discrepancy before sharing
+
+Prevents credibility loss and misinformation in donor reporting.
